@@ -1,0 +1,40 @@
+.switch {
+    background-color: rgb(180, 119, 4);
+    border-radius: 100px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    width: 60px;
+    height: 30px;
+    padding: 0;
+    outline: none;
+    align-items: center;
+}
+
+.switch::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0;
+    left: 0;
+    border-radius: 100px;
+    transition: 0.3s ease all;
+    box-shadow: 0px 0px 2px 2px black;
+}
+
+.switch.active {
+    background: #b3037e;
+}
+
+.switch.active::after {
+    left: unset;
+    right: 0;
+}
+
+.switch span {
+    display: none; /* Ocultamos los <span> ya que no los estás usando visualmente */
+}
